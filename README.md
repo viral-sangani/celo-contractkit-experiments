@@ -4,7 +4,6 @@
 <div align="center">
 
   <h3 align="center">Celo ContractKit Experiments</h3>
-  <img src="assets/LearnDAO.png" />
 
   <p align="center">
     Created a swap with Celo's ContractKit and use-contractkig packages.
