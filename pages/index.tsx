@@ -45,9 +45,7 @@ function WrappedApp() {
     }
     console.log("address :>> ", address);
   }, [address, getConnectedKit]);
-  if (!balances) {
-    return <div>Loading...</div>;
-  }
+
   return (
     <>
       <Navbar />
@@ -55,24 +53,30 @@ function WrappedApp() {
         <main className="flex-1 max-w-5xl mx-auto pt-10">
           <div className="flex flex-col items-center">
             <p className="text-xl font-bold">Swap Celo Tokens</p>
-            <div className="flex-1 w-full px-3 py-2 flex flex-row justify-around space-x-8 mt-6">
-              <TokenItem
-                balance={balances.CELO}
-                logoPath="/celo.png"
-                unit="CELO"
-              />
-              <TokenItem
-                balance={balances.cUSD}
-                logoPath="/cUSD.png"
-                unit="cUSD"
-              />
-              <TokenItem
-                balance={balances.cEUR}
-                logoPath="/cEUR.png"
-                unit="cEUR"
-              />
-            </div>
-            <Swap balances={balances} fetchData={fetchData} />
+            {!balances ? (
+              <>
+                <div className="flex-1 w-full px-3 py-2 flex flex-row justify-around space-x-8 mt-6">
+                  <TokenItem
+                    balance={balances.CELO}
+                    logoPath="/celo.png"
+                    unit="CELO"
+                  />
+                  <TokenItem
+                    balance={balances.cUSD}
+                    logoPath="/cUSD.png"
+                    unit="cUSD"
+                  />
+                  <TokenItem
+                    balance={balances.cEUR}
+                    logoPath="/cEUR.png"
+                    unit="cEUR"
+                  />
+                </div>
+                <Swap balances={balances} fetchData={fetchData} />
+              </>
+            ) : (
+              <div>Loading...</div>
+            )}
           </div>
         </main>
       ) : (
