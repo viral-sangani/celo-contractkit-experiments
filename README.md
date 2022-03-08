@@ -142,8 +142,7 @@ Project Link: [https://github.com/viral-sangani/celo-contractkit-experiments](ht
 
 List of resources I find helpful and would like to give credit to.
 
-- [Moralis Docs](https://docs.moralis.io/introduction/readme)
-- [OpenZeppelin Governor Docs](https://docs.openzeppelin.com/contracts/4.x/api/governance)
+- [Celo Docs](https://docs.celo.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
