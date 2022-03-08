@@ -53,7 +53,7 @@ function WrappedApp() {
         <main className="flex-1 max-w-5xl mx-auto pt-10">
           <div className="flex flex-col items-center">
             <p className="text-xl font-bold">Swap Celo Tokens</p>
-            {!balances ? (
+            {balances ? (
               <>
                 <div className="flex-1 w-full px-3 py-2 flex flex-row justify-around space-x-8 mt-6">
                   <TokenItem
